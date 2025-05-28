@@ -1,0 +1,343 @@
+{{ 'section-feature-promotion.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width feature-promotion-section section-{{ section.id }}-padding">
+  <h2 class="feature-promotion-title">{{ section.settings.title | escape }}</h2>
+
+  {% if section.settings.description != blank %}
+    <div class="feature-promotion-description rte">
+      {{ section.settings.description }}
+    </div>
+  {% endif %}
+
+  <div class="feature-promotion-grid grid grid--1-col grid--2-col-tablet grid--3-col-desktop">
+    {% for block in section.blocks %}
+      <div class="feature-promotion-item gradient" {{ block.shopify_attributes }}>
+        {% if block.settings.icon != 'none' %}
+          <div class="feature-promotion-icon">
+            <!-- Icon rendering removed: 'snippets/icon.liquid' not found -->
+          </div>
+        {% endif %}
+
+        {% if block.settings.image != blank %}
+          <div class="feature-promotion-image">
+            <img
+              src="{{ block.settings.image | image_url: width: 200 }}"
+              alt="{{ block.settings.image.alt | escape }}"
+              loading="lazy"
+              width="{{ block.settings.image.width }}"
+              height="{{ block.settings.image.height }}"
+            >
+          </div>
+        {% endif %}
+
+        <h3 class="feature-promotion-heading">{{ block.settings.heading | escape }}</h3>
+
+        {% if block.settings.text != blank %}
+          <div class="feature-promotion-text rte">
+            {{ block.settings.text }}
+          </div>
+        {% endif %}
+
+        {% if block.settings.button_label != blank and block.settings.button_link != blank %}
+          <a href="{{ block.settings.button_link }}" class="button button--primary feature-promotion-button">
+            {{ block.settings.button_label | escape }}
+          </a>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Feature Promotion",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Why Choose Our Products",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "default": "<p>Discover the features that make our outdoor products stand out from the rest.</p>",
+      "label": "Description"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "options": [
+            {
+              "value": "none",
+              "label": "None"
+            },
+            {
+              "value": "apple",
+              "label": "Apple"
+            },
+            {
+              "value": "banana",
+              "label": "Banana"
+            },
+            {
+              "value": "bottle",
+              "label": "Bottle"
+            },
+            {
+              "value": "box",
+              "label": "Box"
+            },
+            {
+              "value": "carrot",
+              "label": "Carrot"
+            },
+            {
+              "value": "chat_bubble",
+              "label": "Chat bubble"
+            },
+            {
+              "value": "check_mark",
+              "label": "Check mark"
+            },
+            {
+              "value": "clipboard",
+              "label": "Clipboard"
+            },
+            {
+              "value": "dairy",
+              "label": "Dairy"
+            },
+            {
+              "value": "dairy_free",
+              "label": "Dairy free"
+            },
+            {
+              "value": "dryer",
+              "label": "Dryer"
+            },
+            {
+              "value": "eye",
+              "label": "Eye"
+            },
+            {
+              "value": "fire",
+              "label": "Fire"
+            },
+            {
+              "value": "gluten_free",
+              "label": "Gluten free"
+            },
+            {
+              "value": "heart",
+              "label": "Heart"
+            },
+            {
+              "value": "iron",
+              "label": "Iron"
+            },
+            {
+              "value": "leaf",
+              "label": "Leaf"
+            },
+            {
+              "value": "leather",
+              "label": "Leather"
+            },
+            {
+              "value": "lightning_bolt",
+              "label": "Lightning bolt"
+            },
+            {
+              "value": "lipstick",
+              "label": "Lipstick"
+            },
+            {
+              "value": "lock",
+              "label": "Lock"
+            },
+            {
+              "value": "map_pin",
+              "label": "Map pin"
+            },
+            {
+              "value": "nut_free",
+              "label": "Nut free"
+            },
+            {
+              "value": "pants",
+              "label": "Pants"
+            },
+            {
+              "value": "paw_print",
+              "label": "Paw print"
+            },
+            {
+              "value": "pepper",
+              "label": "Pepper"
+            },
+            {
+              "value": "perfume",
+              "label": "Perfume"
+            },
+            {
+              "value": "plane",
+              "label": "Plane"
+            },
+            {
+              "value": "plant",
+              "label": "Plant"
+            },
+            {
+              "value": "price_tag",
+              "label": "Price tag"
+            },
+            {
+              "value": "question_mark",
+              "label": "Question mark"
+            },
+            {
+              "value": "recycle",
+              "label": "Recycle"
+            },
+            {
+              "value": "return",
+              "label": "Return"
+            },
+            {
+              "value": "ruler",
+              "label": "Ruler"
+            },
+            {
+              "value": "serving_dish",
+              "label": "Serving dish"
+            },
+            {
+              "value": "shirt",
+              "label": "Shirt"
+            },
+            {
+              "value": "shoe",
+              "label": "Shoe"
+            },
+            {
+              "value": "silhouette",
+              "label": "Silhouette"
+            },
+            {
+              "value": "snowflake",
+              "label": "Snowflake"
+            },
+            {
+              "value": "star",
+              "label": "Star"
+            },
+            {
+              "value": "stopwatch",
+              "label": "Stopwatch"
+            },
+            {
+              "value": "truck",
+              "label": "Truck"
+            },
+            {
+              "value": "washing",
+              "label": "Washing"
+            }
+          ],
+          "default": "check_mark",
+          "label": "Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Feature heading",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Share key product features with your customers</p>",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "Learn more",
+          "label": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Feature Promotion",
+      "blocks": [
+        {
+          "type": "feature",
+          "settings": {
+            "heading": "Durability",
+            "text": "<p>Built to last with premium materials for all outdoor adventures.</p>",
+            "icon": "check_mark"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "heading": "Comfort",
+            "text": "<p>Designed for all-day comfort no matter where you take them.</p>",
+            "icon": "heart"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "heading": "Portability",
+            "text": "<p>Lightweight and easy to pack for all your adventures.</p>",
+            "icon": "truck"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

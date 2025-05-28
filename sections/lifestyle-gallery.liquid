@@ -1,0 +1,180 @@
+{{ 'section-lifestyle-gallery.css' | asset_url | stylesheet_tag }}
+
+<div class="lifestyle-gallery section-{{ section.id }}-padding">
+  <div class="page-width">
+    {% if section.settings.title != blank %}
+      <h2 class="lifestyle-gallery-title">{{ section.settings.title | escape }}</h2>
+    {% endif %}
+
+    {% if section.settings.description != blank %}
+      <div class="lifestyle-gallery-description">{{ section.settings.description }}</div>
+    {% endif %}
+
+    <div class="lifestyle-gallery-grid">
+      {% for block in section.blocks %}
+        <div class="lifestyle-gallery-item" {{ block.shopify_attributes }}>
+          {% if block.settings.image != blank %}
+            <div class="lifestyle-gallery-image-wrapper">
+              <img
+                srcset="
+                  {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | image_url: width: 550 }} 550w,{%- endif -%}
+                  {%- if block.settings.image.width >= 720 -%}{{ block.settings.image | image_url: width: 720 }} 720w,{%- endif -%}
+                  {%- if block.settings.image.width >= 990 -%}{{ block.settings.image | image_url: width: 990 }} 990w,{%- endif -%}
+                  {%- if block.settings.image.width >= 1100 -%}{{ block.settings.image | image_url: width: 1100 }} 1100w,{%- endif -%}
+                  {{ block.settings.image | image_url }} {{ block.settings.image.width }}w
+                "
+                src="{{ block.settings.image | image_url: width: 550 }}"
+                sizes="(min-width: 990px) calc(50% - 10px), calc(100% - 30px)"
+                alt="{{ block.settings.image.alt | escape }}"
+                height="{{ block.settings.image.height }}"
+                width="{{ block.settings.image.width }}"
+                loading="lazy"
+                class="lifestyle-gallery-image"
+              >
+
+              {% if block.settings.caption != blank or block.settings.button_label != blank %}
+                <div class="lifestyle-gallery-overlay">
+                  {% if block.settings.caption != blank %}
+                    <div class="lifestyle-gallery-caption">{{ block.settings.caption | escape }}</div>
+                  {% endif %}
+
+                  {% if block.settings.button_label != blank and block.settings.button_link != blank %}
+                    <a href="{{ block.settings.button_link }}" class="button button--tertiary lifestyle-gallery-button">
+                      {{ block.settings.button_label | escape }}
+                    </a>
+                  {% endif %}
+                </div>
+              {% endif %}
+            </div>
+          {% else %}
+            <div class="lifestyle-gallery-image-placeholder">
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+
+    {% if section.settings.view_all_link != blank and section.settings.view_all_text != blank %}
+      <div class="lifestyle-gallery-view-all">
+        <a href="{{ section.settings.view_all_link }}" class="button">
+          {{ section.settings.view_all_text | escape }}
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Lifestyle Gallery",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Adventures Await",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "default": "<p>See our products in action across various outdoor settings</p>",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "view_all_text",
+      "default": "View all adventures",
+      "label": "View all button text"
+    },
+    {
+      "type": "url",
+      "id": "view_all_link",
+      "label": "View all button link"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "gallery_image",
+      "name": "Gallery Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "caption",
+          "default": "Mountain Retreat",
+          "label": "Caption"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "Shop Now",
+          "label": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lifestyle Gallery",
+      "blocks": [
+        {
+          "type": "gallery_image",
+          "settings": {
+            "caption": "Mountain Camping"
+          }
+        },
+        {
+          "type": "gallery_image",
+          "settings": {
+            "caption": "Beach Relaxation"
+          }
+        },
+        {
+          "type": "gallery_image",
+          "settings": {
+            "caption": "Family Picnic"
+          }
+        },
+        {
+          "type": "gallery_image",
+          "settings": {
+            "caption": "Backyard Gathering"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

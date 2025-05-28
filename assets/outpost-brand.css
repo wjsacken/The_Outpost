@@ -1,0 +1,223 @@
+/* The Outpost at Lake Norman Brand Styles */
+
+:root {
+  /* Primary Brand Colors */
+  --outpost-dark-brown: #43331A;
+  --outpost-medium-brown: #79562A;
+  --outpost-gray: #7E7970;
+  --outpost-cream: #FEF6E8;
+  
+  /* Secondary Brand Colors */
+  --outpost-blue: #ADC1D4;
+  --outpost-olive: #918F6A;
+  --outpost-sage: #6C776C;
+  --outpost-forest: #5D6147;
+  
+  /* Typography Variables */
+  --font-heading: 'Costa Regular', serif;
+  --font-subheading: 'Ranch Water', sans-serif;
+  --font-accent: 'Vintage Goods', cursive;
+  --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Brand Typography Styles */
+.outpost-heading {
+  font-family: var(--font-heading);
+  color: var(--outpost-dark-brown);
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.outpost-subheading {
+  font-family: var(--font-subheading);
+  color: var(--outpost-medium-brown);
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+}
+
+.outpost-accent {
+  font-family: var(--font-accent);
+  color: var(--outpost-olive);
+}
+
+.outpost-body {
+  font-family: var(--font-body);
+  color: var(--outpost-gray);
+  line-height: 1.6;
+}
+
+/* Brand Button Styles */
+.outpost-button {
+  background-color: var(--outpost-medium-brown);
+  color: var(--outpost-cream);
+  border: none;
+  padding: 12px 28px;
+  font-family: var(--font-subheading);
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+}
+
+.outpost-button:hover {
+  background-color: var(--outpost-dark-brown);
+}
+
+.outpost-button-secondary {
+  background-color: transparent;
+  color: var(--outpost-medium-brown);
+  border: 2px solid var(--outpost-medium-brown);
+  padding: 10px 26px;
+  font-family: var(--font-subheading);
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+}
+
+.outpost-button-secondary:hover {
+  background-color: var(--outpost-medium-brown);
+  color: var(--outpost-cream);
+}
+
+/* Brand Section Styling */
+.outpost-section {
+  background-color: var(--outpost-cream);
+  padding: 3rem 0;
+}
+
+.outpost-section-alt {
+  background-color: var(--outpost-blue);
+  padding: 3rem 0;
+}
+
+.outpost-section-dark {
+  background-color: var(--outpost-forest);
+  color: var(--outpost-cream);
+  padding: 3rem 0;
+}
+
+/* Brand Image Styling */
+.outpost-image {
+  border: 3px solid var(--outpost-cream);
+  box-shadow: 0 5px 15px rgba(67, 51, 26, 0.2);
+}
+
+.outpost-image-frame {
+  position: relative;
+  padding: 10px;
+  background-color: var(--outpost-cream);
+  border: 1px solid var(--outpost-medium-brown);
+}
+
+.outpost-image-frame::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border: 1px solid var(--outpost-olive);
+  z-index: -1;
+}
+
+/* Brand Specific Story Elements - Adapting Narrative Styles */
+.outpost-story-title {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  color: var(--outpost-dark-brown);
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.outpost-story-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background-color: var(--outpost-medium-brown);
+}
+
+.outpost-chapter-title {
+  font-family: var(--font-subheading);
+  font-size: 2.5rem;
+  color: var(--outpost-medium-brown);
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.outpost-chapter-title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -25px;
+  width: 18px;
+  height: 2px;
+  background-color: var(--outpost-olive);
+  transform: translateY(-50%);
+}
+
+.outpost-story-container {
+  position: relative;
+  padding: 2rem 0;
+  border-left: 1px dashed var(--outpost-sage);
+  margin-left: 20px;
+}
+
+.outpost-story-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -8px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--outpost-sage);
+}
+
+.outpost-story-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -8px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--outpost-sage);
+}
+
+.outpost-quote {
+  font-family: var(--font-accent);
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: var(--outpost-dark-brown);
+  position: relative;
+  padding: 0 2rem;
+  margin: 2rem 0;
+}
+
+.outpost-quote::before {
+  content: """;
+  font-size: 4rem;
+  position: absolute;
+  top: -2rem;
+  left: -1rem;
+  color: var(--outpost-medium-brown);
+  opacity: 0.3;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .outpost-story-title {
+    font-size: 2.2rem;
+  }
+  
+  .outpost-chapter-title {
+    font-size: 1.8rem;
+  }
+  
+  .outpost-quote {
+    font-size: 1.4rem;
+    padding: 0 1rem;
+  }
+}
