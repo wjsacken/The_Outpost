@@ -1,12 +1,22 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-  "sections": {    "hero_banner": {
+  "sections": {
+    "hero_banner": {
       "type": "image-banner",
       "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
             "heading": "Come for the coffee, stay for the community, grab the goods before you go",
-            "heading_size": "h0"
+            "heading_size": "hxl"
           }
         },
         "text": {
@@ -32,17 +42,18 @@
         "heading",
         "text",
         "button"
-      ],      "settings": {
+      ],
+      "settings": {
         "image": "shopify://shop_images/coffee.png",
-        "image_overlay_opacity": 40,
+        "image_overlay_opacity": 20,
         "image_height": "large",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-1",
         "image_behavior": "none",
-        "mobile_content_alignment": "center",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "scheme-1",
         "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
         "show_text_below": true
       }
     },
@@ -52,7 +63,7 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>Coffee, community, and connection — all under one roof. Body copy will highlight the purpose: connection. Family-friendly, high-energy, and deeply welcoming. We're a hangout, not a hushed café. A \"come sit with us\" kind of spot.</p>"
+            "text": "<h3>Coffee, community, and connection — all under one roof. Body copy will highlight the purpose: connection. Family-friendly, high-energy, and deeply welcoming. We're a hangout, not a hushed café. A \"come sit with us\" kind of spot.</h3>"
           }
         }
       },
@@ -67,7 +78,8 @@
         "padding_top": 60,
         "padding_bottom": 60
       }
-    },    "whats_the_outpost": {
+    },
+    "whats_the_outpost": {
       "type": "multicolumn",
       "blocks": {
         "coffee": {
@@ -100,27 +112,27 @@
       },
       "block_order": [
         "coffee",
-        "community", 
+        "community",
         "goods"
       ],
       "settings": {
-        "title": "The \"What's The Outpost?\" section",
+        "title": "The \"What's The Outpost?\"",
         "heading_size": "h1",
-        "description": "<p>A 1-2 line of supporting body copy referencing your mission, punchy statement, & highlighting your POVs.</p>",
         "image_width": "full",
         "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
         "columns_desktop": 3,
         "column_alignment": "center",
         "background_style": "primary",
-        "button_label": "",
-        "button_link": "",
         "color_scheme": "scheme-1",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 60,
         "padding_bottom": 60
       }
-    },    "upcoming_events": {
+    },
+    "upcoming_events": {
       "type": "rich-text",
       "blocks": {
         "heading": {
@@ -161,21 +173,22 @@
         "padding_top": 60,
         "padding_bottom": 40
       }
-    },    "featured_products": {
+    },
+    "featured_products": {
       "type": "featured-collection",
       "settings": {
+        "collection": "featured-products",
+        "products_to_show": 4,
         "title": "Quick section introducing the shop + goods / meet the goodies section",
         "heading_size": "h1",
         "description": "<p>Quick blurb introducing shop goods — Lake Norman apparel, adventure items, fun picks. Etc.</p>",
         "show_description": true,
         "description_style": "body",
-        "collection": "featured-products",
-        "products_to_show": 4,
         "columns_desktop": 4,
+        "enable_desktop_slider": true,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "enable_desktop_slider": true,
         "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
@@ -188,7 +201,8 @@
         "padding_top": 20,
         "padding_bottom": 60
       }
-    },    "final_cta": {
+    },
+    "final_cta": {
       "type": "image-banner",
       "blocks": {
         "heading": {
@@ -225,17 +239,18 @@
       "settings": {
         "image_overlay_opacity": 40,
         "image_height": "large",
+        "image_behavior": "ambient",
         "desktop_content_position": "middle-center",
-        "show_text_box": true,
         "desktop_content_alignment": "center",
+        "show_text_box": true,
         "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
-        "show_text_below": false,
-        "image_behavior": "ambient"
+        "mobile_content_alignment": "center",
+        "show_text_below": false
       }
     }
-  },"order": [
+  },
+  "order": [
     "hero_banner",
     "coffee_community_intro",
     "whats_the_outpost",
