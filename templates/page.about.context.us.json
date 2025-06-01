@@ -17,20 +17,20 @@
       "type": "image-with-text",
       "disabled": false,
       "settings": {
-        "image": null,
+        "image": "shopify://shop_images/northern-forest.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "image_behavior": "none",
-        "header-cc5604560fca7df52931e9ae0ec4bd4e": null,
+        "header-efb1686cff4baa854bf72a224a289ea1": null,
         "content_layout": "no-overlap",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "mobile_content_alignment": "left",
-        "header-ec208e907d2e2fcbff36e4c69a4eea10": null,
+        "header-188743e1fe163b74c8990cc6efe11d48": null,
         "section_color_scheme": "",
         "color_scheme": "",
-        "header-3702944ffc8e2adfcc93849b6535e9ff": null,
+        "header-366ea763905b010c685533b23d709ec4": null,
         "padding_top": 36,
         "padding_bottom": 36
       },
@@ -39,7 +39,7 @@
           "type": "heading",
           "disabled": false,
           "settings": {
-            "heading": "Image with text",
+            "heading": "Here’s how we got here",
             "heading_size": "h1"
           }
         },
@@ -47,24 +47,14 @@
           "type": "text",
           "disabled": false,
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Supporting copy that shares the origin story and shared dream of Amy & Aubrey with the Outsiders & Co. and blends the story of an eCommerce brand built from home with the notable need for more family-friendly spaces, real connection, and the kind of place where moms, kids, teens, and strangers could all hang out under one roof. Rentals, community, events, etc. <br/><br/></p>",
             "text_style": "body"
-          }
-        },
-        "button_EkFGi": {
-          "type": "button",
-          "disabled": false,
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
           }
         }
       },
       "block_order": [
         "heading_9443L",
-        "text_bNVKB",
-        "button_EkFGi"
+        "text_bNVKB"
       ],
       "name": "t:sections.image-with-text.presets.name"
     },
@@ -74,21 +64,21 @@
       "settings": {
         "title": "Multicolumn",
         "heading_size": "h1",
-        "header-214f70c9dd8251401095abbfd768810e": null,
+        "header-fd2782704b49ba39489488952900ac78": null,
         "image_width": "full",
         "image_ratio": "adapt",
-        "header-886faea9a56a33d57d1f49094774b8c6": null,
+        "header-94acc97f7beb3d14f26e9aaf1c41c668": null,
         "button_label": "Button label",
         "button_link": "",
-        "header-44cd759b59d4913ef9f0ae400e250d33": null,
+        "header-635e1b113c177f2ea76cae5cab30d731": null,
         "columns_desktop": 3,
         "column_alignment": "left",
         "background_style": "primary",
         "color_scheme": "",
-        "header-a636eb5abccda1d7124af4e82d8b570e": null,
+        "header-515712ed902090c1bc415beecb6a41ae": null,
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "header-d394718e0759fd91cd9cb08a949ea1cd": null,
+        "header-4db756d62d73976c84f8b02d28a613c7": null,
         "padding_top": 36,
         "padding_bottom": 36
       },
@@ -97,9 +87,9 @@
           "type": "column",
           "disabled": false,
           "settings": {
-            "image": null,
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/a-barista-smiles-proudly-stood-in-her-cafe.jpg",
+            "title": "Amy",
+            "text": "<p>Chief Community Cultivator</p>",
             "link_label": "",
             "link": ""
           }
@@ -108,9 +98,9 @@
           "type": "column",
           "disabled": false,
           "settings": {
-            "image": null,
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/woman-infront-of-tree-with-berries.jpeg",
+            "title": "<strong>Aubrey</strong>",
+            "text": "<p>Resident Cool Kid + Creative Director</p>",
             "link_label": "",
             "link": ""
           }
@@ -119,9 +109,9 @@
           "type": "column",
           "disabled": false,
           "settings": {
-            "image": null,
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "image": "shopify://shop_images/smiling-strong-woman-together.jpg",
+            "title": "<strong>Caffeto Sisters</strong>",
+            "text": "<p>Bean Bosses</p>",
             "link_label": "",
             "link": ""
           }
@@ -138,26 +128,26 @@
       "type": "image-banner",
       "disabled": false,
       "settings": {
-        "image": null,
+        "image": "shopify://shop_images/nature-mountains-flower-landscape-adventure.jpg",
         "image_2": null,
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "image_behavior": "none",
-        "header-b17cc7c15df063739555c28c468473a6": null,
+        "header-44e9c4028250cdc25c04c7892b202c66": null,
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
         "show_text_box": true,
-        "text_box_background_opacity": 100,
-        "heading_text_color": "rgba(0,0,0,0)",
+        "text_box_background_opacity": 40,
+        "heading_text_color": "#43331a",
         "paragraph_text_color": "rgba(0,0,0,0)",
-        "header-26373ceaa12929af2b6f3b206a36b43a": null,
+        "header-a5c099f4545f03399b1b4b3220bd63e7": null,
         "text_shadow_enable": false,
         "text_shadow_color": "#000000",
         "text_shadow_horizontal_offset": 1,
         "text_shadow_vertical_offset": 1,
         "text_shadow_blur_radius": 1,
         "color_scheme": "",
-        "header-c89142146af39d1bf32fb6efa5affae2": null,
+        "header-347fdac589d1a3b0a32bf7ef51ec17ec": null,
         "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "show_text_below": true
@@ -167,7 +157,7 @@
           "type": "heading",
           "disabled": false,
           "settings": {
-            "heading": "Image banner",
+            "heading": "Come say hey — we’re real nice (& shop a lil, too)",
             "heading_size": "h1"
           }
         },
@@ -183,12 +173,12 @@
           "type": "buttons",
           "disabled": false,
           "settings": {
-            "header-afb14188e17ae556482229963298f0a2": null,
-            "button_label_1": "Button label",
-            "button_link_1": "",
+            "header-d214746e00a42e22e65e4dda8b9eb151": null,
+            "button_label_1": "Peep The Goods",
+            "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": false,
-            "header-1dbe8ad7f2f29dc96f0cb6cb3c68169b": null,
-            "button_label_2": "Button label",
+            "header-e00294b85b0be1b5a89b943e6f58d937": null,
+            "button_label_2": "Coffee",
             "button_link_2": "",
             "button_style_secondary_2": false
           }
@@ -200,12 +190,76 @@
         "buttons_zjKbd"
       ],
       "name": "t:sections.image-banner.presets.name"
+    },
+    "rich_text_JA9FC": {
+      "type": "rich-text",
+      "disabled": false,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "header-35e914e619990e35373164a2d8595d18": null,
+        "padding_top": 40,
+        "padding_bottom": 52
+      },
+      "blocks": {
+        "heading_BEirj": {
+          "type": "heading",
+          "disabled": false,
+          "settings": {
+            "heading": "We built the place we couldn’t find",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_BEirj"
+      ],
+      "name": "t:sections.rich-text.presets.name"
+    },
+    "rich_text_W4N6E": {
+      "type": "rich-text",
+      "disabled": false,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "header-35e914e619990e35373164a2d8595d18": null,
+        "padding_top": 40,
+        "padding_bottom": 52
+      },
+      "blocks": {
+        "heading_WpBbE": {
+          "type": "heading",
+          "disabled": false,
+          "settings": {
+            "heading": "we’re here for everybody | not a niche, and that’s the point",
+            "heading_size": "h1"
+          }
+        },
+        "text_YN34G": {
+          "type": "text",
+          "disabled": false,
+          "settings": {
+            "text": "<p>Supporting body copy calling out our everyone’s invited” philosophy. A space for working moms, high schoolers, introverts, artists, dads, new neighbors — literally everyone. No gatekeeping, no forced vibes — just good people and great coffee in a place that doesn’t feel manufactured<br/><br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_WpBbE",
+        "text_YN34G"
+      ],
+      "name": "t:sections.rich-text.presets.name"
     }
   },
   "order": [
     "main",
+    "rich_text_JA9FC",
     "image_with_text_nhD4D",
     "multicolumn_d6gDz",
+    "rich_text_W4N6E",
     "image_banner_z7KnM"
   ]
 }
