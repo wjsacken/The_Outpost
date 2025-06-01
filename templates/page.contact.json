@@ -1,10 +1,51 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "rich_text_8N6MxP": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Btb44Y": {
+          "type": "heading",
+          "settings": {
+            "heading": "friendly & punchy encouragement to give us a ring",
+            "heading_size": "h1"
+          }
+        },
+        "text_AGf3mH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Knock-knock jokes, rentals, coffee stuff, etc. Whether you’ve got a rental request, coffee question, or just want to say hey — we’re all ears. And if you’re feeling shy? That’s cool too. We respond to good vibes in all formats. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Btb44Y",
+        "text_AGf3mH"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "form": {
@@ -20,6 +61,7 @@
   },
   "order": [
     "main",
+    "rich_text_8N6MxP",
     "form"
   ]
 }
