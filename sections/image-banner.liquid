@@ -27,6 +27,34 @@
   #Banner-{{ section.id }}::after {
     opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
   }
+  {% if section.settings.show_text_box %}
+  #Banner-{{ section.id }} .banner__box {
+    --text-background-opacity: {{ section.settings.text_box_background_opacity | divided_by: 100.0 }};
+    background-color: rgba(var(--color-background), var(--text-background-opacity)); /* Apply opacity to text box */
+  }
+  {% endif %}
+
+  /* Heading specific color */
+  #Banner-{{ section.id }} .banner__heading {
+    {% if section.settings.heading_text_color != blank and section.settings.heading_text_color != "rgba(0,0,0,0)" and section.settings.heading_text_color != "#00000000" %}
+      color: {{ section.settings.heading_text_color }};
+    {% endif %}
+  }
+
+  /* Paragraph specific color */
+  #Banner-{{ section.id }} .banner__text p {
+    {% if section.settings.paragraph_text_color != blank and section.settings.paragraph_text_color != "rgba(0,0,0,0)" and section.settings.paragraph_text_color != "#00000000" %}
+      color: {{ section.settings.paragraph_text_color }};
+    {% endif %}
+  }
+
+  /* Common text shadow for both heading and paragraph if enabled */
+  {% if section.settings.text_shadow_enable %}
+  #Banner-{{ section.id }} .banner__heading,
+  #Banner-{{ section.id }} .banner__text p {
+    text-shadow: {{ section.settings.text_shadow_horizontal_offset }}px {{ section.settings.text_shadow_vertical_offset }}px {{ section.settings.text_shadow_blur_radius }}px {{ section.settings.text_shadow_color }};
+  }
+  {% endif %}
 {%- endstyle -%}
 
 {%- liquid
@@ -316,6 +344,77 @@
       "id": "show_text_box",
       "default": true,
       "label": "t:sections.image-banner.settings.show_text_box.label"
+    },
+    {
+      "type": "range",
+      "id": "text_box_background_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "%",
+      "label": "Text box background opacity",
+      "default": 100,
+      "info": "Only applies if 'Show text box' is checked."
+    },
+    {
+      "type": "color",
+      "id": "heading_text_color",
+      "label": "Heading text color",
+      "info": "Overrides the default heading text color from the color scheme. Leave transparent to use scheme color.",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "paragraph_text_color",
+      "label": "Paragraph text color",
+      "info": "Overrides the default paragraph text color from the color scheme. Leave transparent to use scheme color.",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "header",
+      "content": "Text Shadow"
+    },
+    {
+      "type": "checkbox",
+      "id": "text_shadow_enable",
+      "label": "Enable text shadow",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "text_shadow_color",
+      "label": "Text shadow color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "text_shadow_horizontal_offset",
+      "min": -5,
+      "max": 5,
+      "step": 1,
+      "unit": "px",
+      "label": "Text shadow horizontal offset",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "text_shadow_vertical_offset",
+      "min": -5,
+      "max": 5,
+      "step": 1,
+      "unit": "px",
+      "label": "Text shadow vertical offset",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "text_shadow_blur_radius",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "label": "Text shadow blur radius",
+      "default": 1
     },
     {
       "type": "color_scheme",
