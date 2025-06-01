@@ -16,39 +16,55 @@
         "padding_bottom": 28
       }
     },
+    "rich_text_4iQTg8": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_j3atPg": {
+          "type": "heading",
+          "settings": {
+            "heading": "We built the place we couldn’t find",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_j3atPg"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "image_with_text_Cjaj7R": {
       "type": "image-with-text",
       "blocks": {
         "heading_PMtRWH": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "Here’s how we got here",
             "heading_size": "h1"
           }
         },
         "text_QJXixR": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Supporting copy that shares the origin story and shared dream of Amy & Aubrey with the Outsiders & Co. and blends the story of an eCommerce brand built from home with the notable need for more family-friendly spaces, real connection, and the kind of place where moms, kids, teens, and strangers could all hang out under one roof. Rentals, community, events, etc. <br/><br/></p>",
             "text_style": "body"
-          }
-        },
-        "button_bKKgg3": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
           }
         }
       },
       "block_order": [
         "heading_PMtRWH",
-        "text_QJXixR",
-        "button_bKKgg3"
+        "text_QJXixR"
       ],
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
+        "image": "shopify://shop_images/northern-forest.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -69,8 +85,8 @@
         "column_9DjeTw": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "title": "Amy",
+            "text": "<p>Chief Community Cultivator</p>",
             "link_label": "",
             "link": ""
           }
@@ -78,8 +94,8 @@
         "column_Czf38B": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "title": "<strong>Aubrey</strong>",
+            "text": "<p>Resident Cool Kid + Creative Director</p>",
             "link_label": "",
             "link": ""
           }
@@ -87,8 +103,8 @@
         "column_yzHByb": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "title": "<strong>Caffeto Sisters</strong>",
+            "text": "<p>Bean Bosses</p>",
             "link_label": "",
             "link": ""
           }
@@ -105,7 +121,7 @@
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "button_label": "Button label",
+        "button_label": "MEET OUR COFFEE DEALERS",
         "button_link": "",
         "columns_desktop": 3,
         "column_alignment": "left",
@@ -123,32 +139,20 @@
         "heading_pcy8h6": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
+            "heading": "we’re here for everybody | not a niche, and that’s the point",
             "heading_size": "h1"
           }
         },
         "text_EDppeB": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
-          }
-        },
-        "button_H78gcX": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "text": "<p>Supporting body copy calling out our everyone’s invited” philosophy. A space for working moms, high schoolers, introverts, artists, dads, new neighbors — literally everyone. No gatekeeping, no forced vibes — just good people and great coffee in a place that doesn’t feel manufactured<br/><br/></p>"
           }
         }
       },
       "block_order": [
         "heading_pcy8h6",
-        "text_EDppeB",
-        "button_H78gcX"
+        "text_EDppeB"
       ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
@@ -166,7 +170,7 @@
         "heading_VTPpbk": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
+            "heading": "Come say hey — we’re real nice (& shop a lil, too)",
             "heading_size": "h1"
           }
         },
@@ -180,10 +184,10 @@
         "buttons_b79aEY": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Button label",
+            "button_label_1": "Peep The Goods",
             "button_link_1": "",
             "button_style_secondary_1": false,
-            "button_label_2": "Button label",
+            "button_label_2": "Coffee",
             "button_link_2": "",
             "button_style_secondary_2": false
           }
@@ -196,14 +200,15 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
+        "image": "shopify://shop_images/nature-mountains-flower-landscape-adventure.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "image_behavior": "none",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
         "show_text_box": true,
-        "text_box_background_opacity": 100,
-        "heading_text_color": "rgba(0,0,0,0)",
+        "text_box_background_opacity": 50,
+        "heading_text_color": "#43331a",
         "paragraph_text_color": "rgba(0,0,0,0)",
         "text_shadow_enable": false,
         "text_shadow_color": "#000000",
@@ -219,6 +224,7 @@
   },
   "order": [
     "main",
+    "rich_text_4iQTg8",
     "image_with_text_Cjaj7R",
     "multicolumn_Mrmmzw",
     "rich_text_RCkLeK",
